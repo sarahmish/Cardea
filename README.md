@@ -153,7 +153,7 @@ Finally, you can evaluate the performance of the model
 cardea.evaluate(X, y, test_size=0.2, shuffle=True)
 ```
 which returns the scoring metric depending on the type of problem
-```bash
+```
 {'Accuracy': 0.75, 
  'F1 Macro': 0.5098039215686274, 
  'Precision': 0.5183001719479243, 
