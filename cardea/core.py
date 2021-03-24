@@ -196,23 +196,22 @@ class Cardea():
         """
         return ft.list_primitives()
 
-    def generate_features(self, cutoff):
+    def generate_features(self, label_times, verbose=False):
         """Returns a the calculated feature matrix.
 
         Args:
             es (featuretools.EntitySet):
                 An entityset that holds data.
-            cutoff (pandas.DataFrame):
+            label_times (pandas.DataFrame):
                 A dataframe that indicates cutoff time for each instance.
 
         Returns:
-            pandas.DataFrame, list:
-              * The generated feature matrix.
-              * List of feature definitions in the feature matrix.
+            pandas.DataFrame:
+              Generated feature matrix.
         """
 
         fm_encoded, _ = self.featurization.generate_feature_matrix(
-            self.es, self.target_entity, cutoff)
+            self.es, self.target_entity, label_times, verbose=verbose)
         fm_encoded = fm_encoded.reset_index(drop=True)
         return fm_encoded
 
