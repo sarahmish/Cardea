@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Assembler &#8212; Cardea 0.1.3.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.f6b7ca918bee2f46fd9abac01cfb07d5.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1e043a052b0af929e4d8.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Labeler" href="data_labeler.html" />
+    <link rel="prev" title="User Guides" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+
+    
+    <a class="navbar-brand" href="../index.html">
+      <p class="title">Cardea</p>
+    </a>
+    
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting_started/index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  User Guides
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api_reference/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../developer_guides/index.html">
+  Developer Guides
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../history.html">
+  Release Notes
+ </a>
+</li>
+
+        
+      </ul>
+
+      <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/MLBazaar/Cardea" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l2 current active">
+  <a class="current reference internal" href="#">
+   Data Assembler
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="data_labeler.html">
+   Data Labeler
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="auto_featurization.html">
+   Featurizer
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="auto_ml.html">
+   Modeler
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="schemas.html">
+   Schemas
+  </a>
+ </li>
+</ul>
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entityset">
+   Entityset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-assembling-demo">
+   Data Assembling Demo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#faq">
+   FAQ
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="data-assembler">
+<span id="id1"></span><h1>Data Assembler<a class="headerlink" href="#data-assembler" title="Permalink to this headline">¶</a></h1>
+<p>Cardea makes use of a module to plugin the user’s data and automatically organize it into the framework. It is built on top of schemas that support electronic health records (EHR). One of the schemas we support is Fast Healthcare Interoperability Resources (FHIR) schema. You can read more about the supported <a class="reference internal" href="schemas.html#schemas"><span class="std std-ref">Schemas</span></a>.</p>
+<p>Cardea expects the raw data to be a folder pointing to data in <code class="docutils literal notranslate"><span class="pre">.csv</span></code> format to ingest. Each table/resource should correspond to a single <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file which is then directly fed into cardea using <code class="docutils literal notranslate"><span class="pre">load_entityset</span></code>.</p>
+<div class="section" id="entityset">
+<h2>Entityset<a class="headerlink" href="#entityset" title="Permalink to this headline">¶</a></h2>
+<p>Entityset represents the data structure produced by the data assembler module. The process organizes the data into its corresponding table/resource within the schema and produces an entityset. Generally, the entityset is a collection of entities and relationships:</p>
+<ul class="simple">
+<li><p><strong>entities</strong> are used to prepare the data (tables), into a structured input for later usage. It contains a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> at its core, with meta information indicating the index column, time columns, and other information.</p></li>
+<li><p><strong>relationships</strong> indicate the connection between two entities. It represents how for an entity <em>A</em> with primary key <em>1</em>, there is another entity <em>B</em> with foreign key <em>2</em> that references it. The relationship <code class="docutils literal notranslate"><span class="pre">B.2</span> <span class="pre">-&gt;</span> <span class="pre">A.1</span></code> ties them together. This parent-child relationship is embedded within the entityset.</p></li>
+</ul>
+<p>To read more about entitisets, visit <a class="reference external" href="https://featuretools.alteryx.com/en/stable/api_reference.html#entityset-entity-relationship-variable-types">EntitySet</a>.</p>
+</div>
+<div class="section" id="data-assembling-demo">
+<h2>Data Assembling Demo<a class="headerlink" href="#data-assembling-demo" title="Permalink to this headline">¶</a></h2>
+<p>Let’s start first by looking at some raw data. Here, in this example, we have the  Kaggle dataset: <a class="reference external" href="https://www.kaggle.com/joniarroba/noshowappointments">Medical Appointment No Shows</a> already preprocessed to be representative of the FHIR schema. You can download the dataset directly from <a class="reference external" href="https://dai-cardea.s3.amazonaws.com/kaggle.zip">Amazon S3</a> or you can run the following command to download it and unzip it:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl -O https://dai-cardea.s3.amazonaws.com/kaggle.zip &amp;&amp; unzip -d kaggle kaggle.zip</span>
+</pre></div>
+</div>
+<p>then you would have the following directory</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">kaggle</span>
+<span class="go">├── Coding.csv</span>
+<span class="go">├── Appointment_Participant.csv</span>
+<span class="go">├── Address.csv</span>
+<span class="go">├── CodeableConcept.csv</span>
+<span class="go">├── Reference.csv</span>
+<span class="go">├── Observation.csv</span>
+<span class="go">├── Identifier.csv</span>
+<span class="go">└── Appointment.csv</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>notice how the file names correspond to the resource name in FHIR.</p>
+</div>
+<p>Then you can directly load the dataset into cardea by supplying the folder path to the <code class="docutils literal notranslate"><span class="pre">load_entityset</span></code>.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">cardea</span> <span class="kn">import</span> <span class="n">Cardea</span>
+
+<span class="gp">In [2]: </span><span class="n">cardea</span> <span class="o">=</span> <span class="n">Cardea</span><span class="p">()</span>
+
+<span class="gp">In [3]: </span><span class="n">cardea</span><span class="o">.</span><span class="n">load_entityset</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="s1">&#39;kaggle&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can investigate what the entityset looks like by simply displaying the entityset through <code class="docutils literal notranslate"><span class="pre">es</span></code>.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">cardea</span><span class="o">.</span><span class="n">es</span>
+<span class="gh">Out[4]: </span><span class="go"></span>
+<span class="go">Entityset: fhir</span>
+<span class="go">  Entities:</span>
+<span class="go">    CodeableConcept [Rows: 4, Columns: 2]</span>
+<span class="go">    Patient [Rows: 6100, Columns: 4]</span>
+<span class="go">    Address [Rows: 81, Columns: 2]</span>
+<span class="go">    Appointment_Participant [Rows: 6100, Columns: 2]</span>
+<span class="go">    Identifier [Rows: 227151, Columns: 1]</span>
+<span class="go">    Observation [Rows: 110527, Columns: 3]</span>
+<span class="go">    Appointment [Rows: 110527, Columns: 5]</span>
+<span class="go">    Reference [Rows: 6100, Columns: 1]</span>
+<span class="go">    Coding [Rows: 3, Columns: 2]</span>
+<span class="go">  Relationships:</span>
+<span class="go">    CodeableConcept.coding -&gt; Coding.object_id</span>
+<span class="go">    Patient.address -&gt; Address.object_id</span>
+<span class="go">    Appointment_Participant.actor -&gt; Reference.identifier</span>
+<span class="go">    Observation.code -&gt; CodeableConcept.object_id</span>
+<span class="go">    Observation.subject -&gt; Reference.identifier</span>
+<span class="go">    Appointment.participant -&gt; Appointment_Participant.object_id</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>you can use <code class="docutils literal notranslate"><span class="pre">cardea.es.plot()</span></code> to visualize your entityset.</p>
+</div>
+<p>Showing above are two sections:</p>
+<ul class="simple">
+<li><p><strong>Entities</strong> where we can see the resources loaded. For example, <em>Appointment</em> is a resource in FHIR that contains most of the records of this dataset and contains 5 columns.</p></li>
+<li><p><strong>Relationships</strong> where we can see the parent-child relationship. For example, <code class="docutils literal notranslate"><span class="pre">Appointment.participant</span></code> is the column <code class="docutils literal notranslate"><span class="pre">participant</span></code> in table <code class="docutils literal notranslate"><span class="pre">appointment</span></code> that references the primary key <code class="docutils literal notranslate"><span class="pre">object_id</span></code> in table <code class="docutils literal notranslate"><span class="pre">Appointment_Partipant</span></code>.</p></li>
+</ul>
+<p>We will utilize this structure to develop our <a class="reference internal" href="data_labeler.html#data-labeler"><span class="std std-ref">Data Labeler</span></a> and <a class="reference internal" href="auto_featurization.html#featurizer"><span class="std std-ref">Featurizer</span></a>.</p>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<p>1. <strong>What schemas do we support right now?</strong>
+We currently support two <a class="reference internal" href="schemas.html#schemas"><span class="std std-ref">Schemas</span></a>, Fast Healthcare Interoperability Resources (FHIR), and Medical Information Mart for Intensive Care III (MIMIC-III).
+2. <strong>What if I only have a subset of tables?</strong>
+Cardea seamlessly integrates the available data, dropping missing variables and links. Having only a subset of the data does not preclude your from solving a prediction problem if all the necessary information is still present.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">User Guides</a>
+    <a class='right-next' id="next-link" href="data_labeler.html" title="next page">Data Labeler</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.1e043a052b0af929e4d8.js"></script>
+
+
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2018, MIT Data To AI Lab.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Labeler &#8212; Cardea 0.1.3.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.f6b7ca918bee2f46fd9abac01cfb07d5.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1e043a052b0af929e4d8.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Featurizer" href="auto_featurization.html" />
+    <link rel="prev" title="Data Assembler" href="data_assembler.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+
+    
+    <a class="navbar-brand" href="../index.html">
+      <p class="title">Cardea</p>
+    </a>
+    
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting_started/index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  User Guides
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api_reference/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../developer_guides/index.html">
+  Developer Guides
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../history.html">
+  Release Notes
+ </a>
+</li>
+
+        
+      </ul>
+
+      <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/MLBazaar/Cardea" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l2">
+  <a class="reference internal" href="data_assembler.html">
+   Data Assembler
+  </a>
+ </li>
+ <li class="toctree-l2 current active">
+  <a class="current reference internal" href="#">
+   Data Labeler
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="auto_featurization.html">
+   Featurizer
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="auto_ml.html">
+   Modeler
+  </a>
+ </li>
+ <li class="toctree-l2">
+  <a class="reference internal" href="schemas.html">
+   Schemas
+  </a>
+ </li>
+</ul>
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#label-times">
+   Label Times
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#available-prediction-problems">
+   Available Prediction Problems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-labeling-demo">
+   Data Labeling Demo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-new-prediction-problems">
+   Creating New Prediction Problems
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="data-labeler">
+<span id="id1"></span><h1>Data Labeler<a class="headerlink" href="#data-labeler" title="Permalink to this headline">¶</a></h1>
+<p>The data labeler is considered a fundamental component that formulates the prediction task for Machine Learning models. It includes generating and identifying <strong>label times</strong>. In this page, we detail what label times are.</p>
+<div class="section" id="label-times">
+<h2>Label Times<a class="headerlink" href="#label-times" title="Permalink to this headline">¶</a></h2>
+<p>After loading the data, you will need to define the prediction task you want to solve (or use one of the already defined tasks). For example, <em>Missed Appointment</em> is a common task that aims to predict whether the patient showed up to the appointment or not, helping hospitals to optimize their scheduling policies and resources efficiently. So how do we formulate prediction?</p>
+<p>First, you will need to articulate what is the <strong>label</strong> (outcome) you want to predict? Following with the previous example, the <em>Missed Appointment</em> task is currently defined as a binary classification task in the system, determining whether a patient showed to the appointment or not.</p>
+<p>Next, you will need to determine the <strong>time</strong> in which you define your features over. Continuing with the previous example of <em>Missed Appointments</em>, I would like to predict whether the patient will show up to the appointment or not from the point of scheduling appointment. In other words, I would use all the data I could get up until the time when the appointment was scheduled as data for featurization.</p>
+<p>Lastly, you will determine the entity that contains this piece of information, <strong>target entity</strong>. Combining these information together, we get <code class="docutils literal notranslate"><span class="pre">label_times</span></code>.</p>
+</div>
+<div class="section" id="available-prediction-problems">
+<h2>Available Prediction Problems<a class="headerlink" href="#available-prediction-problems" title="Permalink to this headline">¶</a></h2>
+<p>There is currently six readily available prediction problems for users to explore easily, these are described as follows:</p>
+<ul class="simple">
+<li><p><strong>Diagnosis prediction</strong>: predicts whether a patient will be diagnosed with a given ICD diagnosis code.</p></li>
+<li><p><strong>Length of Stay (LOS) prediction</strong>: predicts how many days the patient will be in the hospital.</p></li>
+<li><p><strong>Prolonged Length of Stay (PLOS) prediction</strong>: predicts whether a patient stayed in the hospital more or less than a period of time (a week by default).</p></li>
+<li><p><strong>Missed Appointment prediction</strong>: predicts whether the patient will show up to the appointment or not.</p></li>
+<li><p><strong>Mortality prediction</strong>: predicts patient’s mortality.</p></li>
+<li><p><strong>Readmission prediction</strong>: predicts whether a patient will revisit the hospital within a certain period of time (a month by default).</p></li>
+</ul>
+</div>
+<div class="section" id="data-labeling-demo">
+<h2>Data Labeling Demo<a class="headerlink" href="#data-labeling-demo" title="Permalink to this headline">¶</a></h2>
+<p>Contiuning from <a class="reference internal" href="data_assembler.html#data-assembler"><span class="std std-ref">Data Assembler</span></a>, we can now use <code class="docutils literal notranslate"><span class="pre">select_problem</span></code> with the desired prediction problem to generate <code class="docutils literal notranslate"><span class="pre">label_times</span></code>.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span> <span class="nn">cardea</span> <span class="kn">import</span> <span class="n">Cardea</span>
+
+<span class="gp">In [2]: </span><span class="n">cardea</span> <span class="o">=</span> <span class="n">Cardea</span><span class="p">()</span>
+
+<span class="gp">In [3]: </span><span class="n">cardea</span><span class="o">.</span><span class="n">load_entityset</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="s1">&#39;kaggle&#39;</span><span class="p">)</span>
+
+<span class="gp">In [4]: </span><span class="n">label_times</span> <span class="o">=</span> <span class="n">cardea</span><span class="o">.</span><span class="n">select_problem</span><span class="p">(</span><span class="s1">&#39;MissedAppointment&#39;</span><span class="p">)</span>
+
+<span class="gp">In [5]: </span><span class="n">label_times</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[5]: </span><span class="go"></span>
+<span class="go">                       time  instance_id   label</span>
+<span class="go">5642903 2016-04-29 18:38:08      5642903  noshow</span>
+<span class="go">5642503 2016-04-29 16:08:27      5642503  noshow</span>
+<span class="go">5642549 2016-04-29 16:19:04      5642549  noshow</span>
+<span class="go">5642828 2016-04-29 17:29:31      5642828  noshow</span>
+<span class="go">5642494 2016-04-29 16:07:23      5642494  noshow</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>you can use <code class="docutils literal notranslate"><span class="pre">cardea.list_problems()</span></code> to view available prediction problems.</p>
+</div>
+</div>
+<div class="section" id="creating-new-prediction-problems">
+<h2>Creating New Prediction Problems<a class="headerlink" href="#creating-new-prediction-problems" title="Permalink to this headline">¶</a></h2>
+<p>Coming Soon.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="data_assembler.html" title="previous page">Data Assembler</a>
+    <a class='right-next' id="next-link" href="auto_featurization.html" title="next page">Featurizer</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.1e043a052b0af929e4d8.js"></script>
+
+
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2018, MIT Data To AI Lab.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
