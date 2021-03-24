@@ -239,20 +239,20 @@
 <span class="go">Entityset: fhir</span>
 <span class="go">  Entities:</span>
 <span class="go">    CodeableConcept [Rows: 4, Columns: 2]</span>
-<span class="go">    Patient [Rows: 6100, Columns: 4]</span>
+<span class="go">    Coding [Rows: 3, Columns: 2]</span>
 <span class="go">    Address [Rows: 81, Columns: 2]</span>
-<span class="go">    Appointment_Participant [Rows: 6100, Columns: 2]</span>
+<span class="go">    Reference [Rows: 6100, Columns: 1]</span>
 <span class="go">    Identifier [Rows: 227151, Columns: 1]</span>
 <span class="go">    Observation [Rows: 110527, Columns: 3]</span>
+<span class="go">    Appointment_Participant [Rows: 6100, Columns: 2]</span>
+<span class="go">    Patient [Rows: 6100, Columns: 4]</span>
 <span class="go">    Appointment [Rows: 110527, Columns: 5]</span>
-<span class="go">    Reference [Rows: 6100, Columns: 1]</span>
-<span class="go">    Coding [Rows: 3, Columns: 2]</span>
 <span class="go">  Relationships:</span>
 <span class="go">    CodeableConcept.coding -&gt; Coding.object_id</span>
-<span class="go">    Patient.address -&gt; Address.object_id</span>
-<span class="go">    Appointment_Participant.actor -&gt; Reference.identifier</span>
 <span class="go">    Observation.code -&gt; CodeableConcept.object_id</span>
 <span class="go">    Observation.subject -&gt; Reference.identifier</span>
+<span class="go">    Appointment_Participant.actor -&gt; Reference.identifier</span>
+<span class="go">    Patient.address -&gt; Address.object_id</span>
 <span class="go">    Appointment.participant -&gt; Appointment_Participant.object_id</span>
 </pre></div>
 </div>
@@ -270,8 +270,8 @@
 <div class="section" id="faq">
 <h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
 <p>1. <strong>What schemas do we support right now?</strong>
-We currently support two <a class="reference internal" href="schemas.html#schemas"><span class="std std-ref">Schemas</span></a>, Fast Healthcare Interoperability Resources (FHIR), and Medical Information Mart for Intensive Care III (MIMIC-III).
-2. <strong>What if I only have a subset of tables?</strong>
+We currently support two <a class="reference internal" href="schemas.html#schemas"><span class="std std-ref">Schemas</span></a>, Fast Healthcare Interoperability Resources (FHIR), and Medical Information Mart for Intensive Care III (MIMIC-III).</p>
+<p>2. <strong>What if I only have a subset of tables?</strong>
 Cardea seamlessly integrates the available data, dropping missing variables and links. Having only a subset of the data does not preclude your from solving a prediction problem if all the necessary information is still present.</p>
 </div>
 </div>

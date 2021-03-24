@@ -77,6 +77,7 @@ FAQ
 
 1. **What schemas do we support right now?**
 We currently support two :ref:`schemas`, Fast Healthcare Interoperability Resources (FHIR), and Medical Information Mart for Intensive Care III (MIMIC-III).
+
 2. **What if I only have a subset of tables?**
 Cardea seamlessly integrates the available data, dropping missing variables and links. Having only a subset of the data does not preclude your from solving a prediction problem if all the necessary information is still present.
 

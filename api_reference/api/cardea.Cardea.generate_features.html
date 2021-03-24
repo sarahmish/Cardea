@@ -251,24 +251,20 @@
 <h1>cardea.Cardea.generate_features<a class="headerlink" href="#cardea-cardea-generate-features" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt id="cardea.Cardea.generate_features">
-<code class="sig-prename descclassname">Cardea.</code><code class="sig-name descname">generate_features</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cutoff</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/cardea/core.html#Cardea.generate_features"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cardea.Cardea.generate_features" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">Cardea.</code><code class="sig-name descname">generate_features</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">label_times</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/cardea/core.html#Cardea.generate_features"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cardea.Cardea.generate_features" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a the calculated feature matrix.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>es</strong> (<em>featuretools.EntitySet</em>) – An entityset that holds data.</p></li>
-<li><p><strong>cutoff</strong> (<em>pandas.DataFrame</em>) – A dataframe that indicates cutoff time for each instance.</p></li>
+<li><p><strong>label_times</strong> (<em>pandas.DataFrame</em>) – A dataframe that indicates cutoff time for each instance.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>The generated feature matrix.</p></li>
-<li><p>List of feature definitions in the feature matrix.</p></li>
-</ul>
-</p>
+<dd class="field-even"><p>Generated feature matrix.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>pandas.DataFrame, list</p>
+<dd class="field-odd"><p>pandas.DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
